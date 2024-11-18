@@ -66,11 +66,15 @@ function reset_track_height()
 
 end
 
+
+------------------------
+
 hide_empty_tracks_in_timesel()
+
 reset_track_height()
 
-
-
 reaper.TrackList_AdjustWindows(true)
+
+reaper.Main_OnCommand(reaper.NamedCommandLookup("40031"), 0) -- View: Zoom time selection
 
 reaper.UpdateArrange()
